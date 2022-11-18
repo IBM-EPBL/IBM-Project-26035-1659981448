@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ansView">
+    <div class="ans-left">
+        <h1>Image Uploaded:</h1>
+        <img class="image-cont" src={{ url_for('static', filename=showcase1  ) }} >
+    </div>
+
+    <div class="ans-right">
+        <h1 style="color: black;">Nutritional Values: </h1>
+        <div class="flex" style="color: black;">
+            <h3>Food detected:</h3>
+            <p class="pr5">{{ scase }}</p>
+        </div>
+        {% for k in showcase[0] %}
+        <p><b style="color: black;">{{ k }}</b> : {{ showcase[0].get(k) }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

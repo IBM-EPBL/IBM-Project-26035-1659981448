@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="uploadview">
+    <form class="formView" method="post" action="/predict" enctype="multipart/form-data">
+        <h2>Upload your image</h2>
+        <input id="file" type="file" name="file" class="inpFile" required>
+        <label for="file">Click To Upload</label>
+        <input class="submit" type="Submit" value="Check and tell!">
+    </form>
+</div>
+{% endblock %}
